@@ -17,6 +17,13 @@ repositories {
         name = "meteor-maven-snapshots"
         url = uri("https://maven.meteordev.org/snapshots")
     }
+    maven {
+        name = "spongepowered-maven"
+        url = uri("https://repo.spongepowered.org/maven")
+    }
+    flatDir {
+        dirs("libs")
+    }
 }
 
 dependencies {
@@ -27,6 +34,9 @@ dependencies {
 
     // Meteor
     modImplementation(libs.meteor.client)
+
+    modImplementation(files("libs/baritone-meteor-1.21.11.jar"))
+
 }
 
 tasks {
@@ -64,4 +74,8 @@ tasks {
         options.compilerArgs.add("-Xlint:deprecation")
         options.compilerArgs.add("-Xlint:unchecked")
     }
+}
+
+loom {
+    accessWidenerPath.set(file("src/main/resources/leavesHack.accesswidener"))
 }

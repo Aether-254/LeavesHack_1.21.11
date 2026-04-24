@@ -1,32 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "leaves-hack",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "LeavesHack",
+  "description": "致力于改善无政府服务器生存体验的MeteorClient插件 dev:Leaves_awa port:Aether_254 ",
   "authors": [
-    "seasnail"
+    "Leaves_awa",
+    "Aether_254"
   ],
+  "accessWidener": "leavesHack.accesswidener",
   "contact": {
-    "sources": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/Aether_254/LeavesHack_1.21.11"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.AddonTemplate"
+      "com.dev.leavesHack.LeavesHack"
     ]
   },
-  "mixins": [
-    "addon-template.mixins.json"
-  ],
   "custom": {
-    "meteor-client:color": "225,25,25",
-    "modmenu": {
-      "parent": {
-        "id": "meteor-client"
-      }
-    }
+    "meteor-client:color": "225,25,25"
   },
   "depends": {
     "java": ">=21",
